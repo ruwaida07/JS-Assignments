@@ -1,0 +1,40 @@
+<!--Write a program to generate a quote randomly and display it on web page in a proper format. -->
+
+
+//HTML Code:-
+
+
+<html>
+    <head>
+        <title>Quote Generator</title>
+    </head>
+    <body>
+        <h1>Welcome to a Quote Generator!</h1>
+        <div id="QuoteDisplay"></div>
+        <button onclick="newQuote()">New Quote</button>
+        <script src="MiniProject.js"></script>
+    </body>
+</html>
+
+
+//JavaScript Code:-
+
+
+var quotes = ['Learn to value yourself, which means: fight for your happiness.',
+'Our capacity to draw happiness from aesthetic objects or material goods in fact seems critically dependent,on our first satisfying a more important range of emotional or psychological needs, among them the need for understanding for love expression and respect.', 
+'The true secret of happiness lies in the taking a genuine interest in all the details of daily life.',
+'The greatest happiness you can have is knowing that you do not necessarily require happiness.',
+'People should find happiness in the little things, like family.', 
+'To enjoy good health, to bring true happiness to one’s family, to bring peace to all, one must first discipline and control one’s own mind. If a man can control his mind he can find the way to Enlightenment, and all wisdom and virtue will naturally come to him.',
+'There is some kind of a sweet innocence in being human—in not having to be just happy or just sad—in the nature of being able to be both broken and whole, at the same time.',
+'Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness.', 
+'It is far better to take things as they come along with patience and equanimity.', 
+'If you want happiness for an hour, take a nap.',
+'If you want happiness for a day, go fishing. If you want happiness for a year, inherit a fortune.',
+'If you want happiness for a lifetime, help someone else.']
+
+function newQuote() 
+{
+    var randomnumber = Math.floor(Math.random() * (quotes.length));
+    document.getElementById('QuoteDisplay').innerHTML = quotes[randomnumber];
+}
